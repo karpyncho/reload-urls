@@ -1,6 +1,21 @@
+
+# ###########################################################################3
+# This is the settings to config the urls
+
+ADD_HELLO_URL = False
+from tests.urls import urlpatterns  # Import urlpatterns to load module cannot be done before ADD_HELLO_URL
+
+
+ROOT_URLCONF = 'tests.urls'
+
+print(urlpatterns)
+
+# ###########################################################################3
+
 SECRET_KEY = "secret_key_for_testing"
 
-USE_TZ=False
+USE_TZ = False
+
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -28,8 +43,6 @@ DATABASES = {
     },
 }
 
-ROOT_URLCONF = 'tests.urls'
-# ROOT_URLCONF = 'django_mpf_auth.urls'
 
 TEMPLATES = [
     {
