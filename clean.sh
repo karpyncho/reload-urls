@@ -13,11 +13,10 @@
 
 [ -d src/.pytest_cache ] && echo "Deleting src/.pytest_cache directory" && rm -rf src/.pytest_cache
 
-[ -d src/*.egg-info ] && echo "Deleting src/*.egg-info directory" && rm -rf src/*.egg-info
+for dir in src/*.egg-info; do [ -d "$dir" ] && echo "Deleting $dir directory" && rm -rf $dir; done
 
 [ -f .coverage ] && echo "Deleting .coverage file" && rm .coverage
 
 [ -f sqlite3.db ] && echo "Deleting sqlite3.db file" && rm sqlite3.db
 
 [ -f coverage.xml ] && echo "Deleting coverage.xml file" && rm coverage.xml
-

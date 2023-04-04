@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### [Unreleased]
 
+### [0.1.0] - 2023-04-04
+
+* first version with
+  + TestCaseReloadableURL class
+  + reload_urls method
+  + all tests with 100% coverage
+
 #### Features
 
  * 
