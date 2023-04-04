@@ -130,3 +130,6 @@ dmypy.json
 
 # pycharm
 .idea/
+
+#sqllite
+sqlite3.db

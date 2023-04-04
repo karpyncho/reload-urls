@@ -1,8 +1,8 @@
-
-from karpyncho.reload_urls import *
-from unittest import TestCase
+from karpyncho.reload_urls import TestCaseReloadableURL
 
 
-class TestPrint(TestCase):
-    def test_ok(self):
-        pass
+class TestTestCaseReloadableURL(TestCaseReloadableURL):
+    def test_reload_urls(self):
+        tc = TestCaseReloadableURL()
+        with tc.reload_urls(None, MY_SETTING="My setting"):
+            pass
