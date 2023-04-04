@@ -52,7 +52,7 @@ jobs:
       - name: Install dependencies
         run: python -m pip install pytest-cov django==4.1 pytest-django
       - name: Run test suite
-        run: pytest --cov=. --cov-report=term-missing --cov-report=xml --cov-fail-under=100
+        run: pytest src --cov=. --cov-report=term-missing --cov-report=xml --cov-fail-under=100
         env:
           PYTEST_ADDOPTS: "-vv --durations=10"
       - name: Upload coverage reports to Codecov

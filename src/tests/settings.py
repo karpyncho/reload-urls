@@ -1,3 +1,4 @@
+USE_TZ = False  # This lie should be before the import url_patterns, if not Warn    ing USE_TZ is raised
 
 # ###########################################################################3
 # This is the settings to config the urls
@@ -13,8 +14,6 @@ print(urlpatterns)
 # ###########################################################################3
 
 SECRET_KEY = "secret_key_for_testing"
-
-USE_TZ = False
 
 
 INSTALLED_APPS = (
