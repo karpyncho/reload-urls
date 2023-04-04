@@ -17,5 +17,7 @@
 
 [ -f .coverage ] && echo "Deleting .coverage file" && rm .coverage
 
+[ -f sqlite3.db ] && echo "Deleting sqlite3.db file" && rm sqlite3.db
+
 [ -f coverage.xml ] && echo "Deleting coverage.xml file" && rm coverage.xml
 
