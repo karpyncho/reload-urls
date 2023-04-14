@@ -8,7 +8,7 @@ version = "0.1.0"
 authors = [
     {name = "Sebastian Quiles", email = "qsebas@gmail.com"},
 ]
-description = "A contex manaager to reload urls routing in unittests changing a django setting."
+description = "A context manaager to reload urls routing in unittests changing a django setting."
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
