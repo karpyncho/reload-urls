@@ -7,6 +7,7 @@ import sys
 from importlib import import_module, reload
 from types import TracebackType
 from typing import Optional
+
 from django.conf import settings as django_settings  # type: ignore
 from django.test import TestCase  # type: ignore
 from django.test.testcases import override_settings  # type: ignore
