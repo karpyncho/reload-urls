@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### [Unreleased]
 
+#### Changed
+
+ + TestCaseReloadableURL inherits from django.test.SimpleTestCase instead of django.test.TestCase
+ + added default None value for reload_urls's url_module parameter
+
 ### [0.1.1] - 2023-04-15
 
 #### Fixed
