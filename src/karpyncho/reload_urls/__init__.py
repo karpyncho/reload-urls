@@ -9,7 +9,7 @@ from types import TracebackType
 from typing import Optional
 
 from django.conf import settings as django_settings  # type: ignore
-from django.test import TestCase  # type: ignore
+from django.test import SimpleTestCase  # type: ignore
 from django.test.testcases import override_settings  # type: ignore
 from django.urls import clear_url_caches  # type: ignore
 
@@ -43,14 +43,14 @@ class ReloadUrlsContextManager:
             import_module(urlconf)
 
     def __init__(self, url_module: Optional[str],
-                 test_case_instance: TestCase,
+                 test_case_instance: SimpleTestCase,
                  **settings: object) -> None:
         """
         Constructor of ReloadUrlsContextManager
 
         :param url_module: string of the module to be reloaded, if None the module specified in settings.ROOT_URLCONF
         will be reloaded
-        :param test_case_instance: TestCase instance, used to call the setting method (override_settings
+        :param test_case_instance: SimpleTestCase instance, used to call the setting method (override_settings
         context manager)
         :param settings: keyword params to be packed in settings variable, each parameter has the aspect:
         DJANGO_SETTING_TO_BE_OVERRIDE="new value for this setting"
@@ -86,7 +86,7 @@ class ReloadUrlsContextManager:
         ReloadUrlsContextManager._reload_urlconf()
 
 
-class TestCaseReloadableURL(TestCase):
+class TestCaseReloadableURL(SimpleTestCase):
     """
     TestCaseReloadableURL is the class to be used in tests classes as inheritance instead of traditional
     Django TestCase.
