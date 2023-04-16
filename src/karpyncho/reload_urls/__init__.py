@@ -91,7 +91,7 @@ class TestCaseReloadableURL(SimpleTestCase):
     TestCaseReloadableURL is the class to be used in tests classes as inheritance instead of traditional
     Django TestCase.
     """
-    def reload_urls(self, url_module: Optional[str], **settings: object) -> ReloadUrlsContextManager:
+    def reload_urls(self, url_module: Optional[str] = None, **settings: object) -> ReloadUrlsContextManager:
         """
         A class that inherits from TestCaseReloadableURL can use a context like:
         with self.reload_urls("module.urls", SETTING="new value"):

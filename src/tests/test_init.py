@@ -9,7 +9,13 @@ class TestTestCaseReloadableURL(TestCaseReloadableURL):
             self.client.get(reverse("hello"))
         with self.assertRaises(NoReverseMatch):
             reverse("hello")
-    def test_reload_urls_by_root_urlconf(self):
+    def test_reload_urls_by_root_urlconf_none(self):
+        with self.reload_urls(None, ADD_HELLO_URL=True):
+            self.client.get(reverse("hello"))
+        with self.assertRaises(NoReverseMatch):
+            reverse("hello")
+
+    def test_reload_urls_by_root_urlconf_no_param(self):
         with self.reload_urls(None, ADD_HELLO_URL=True):
             self.client.get(reverse("hello"))
         with self.assertRaises(NoReverseMatch):
