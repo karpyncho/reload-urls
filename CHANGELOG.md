@@ -7,10 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### [Unreleased]
 
+### [0.1.1] - 2023-04-15
+
 #### Fixed
 
  * Removed __init__.py for namespace package karpyncho
-
 
 ### [0.1.0] - 2023-04-04
 
