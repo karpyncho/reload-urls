@@ -20,3 +20,10 @@ for dir in src/*.egg-info; do [ -d "$dir" ] && echo "Deleting $dir directory" &&
 [ -f sqlite3.db ] && echo "Deleting sqlite3.db file" && rm sqlite3.db
 
 [ -f coverage.xml ] && echo "Deleting coverage.xml file" && rm coverage.xml
+
+[[ "$*" =~ ^--venv$ ]] && [ -d venv ] && echo "Deleting venv directory" && rm -rf venv
+
+[[ "$*" =~ ^--idea$ ]] && [ -d .idea ] && echo "Deleting .idea directory" && rm -rf .idea
+
+[[ "$*" =~ ^--tox$ ]] && [ -d .tox ] && echo "Deleting .tox directory" && rm -rf .tox
+                                                                                        29,1        Final
